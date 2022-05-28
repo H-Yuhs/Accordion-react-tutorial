@@ -1,0 +1,309 @@
+:root{
+    --bluePurple:#4d13d1;
+    --dirtyWhite:#fbf8f3;
+    --dirtyWtr:#fbf8f3bb;
+    --borderColr:#dadada;
+    --listColr:#4f4f4f;
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.wrapper,.head__main--container{
+    display: flex;
+    flex-direction: column;
+}
+.head__main--container,.main__main--container,.footer__main--container{
+    padding:2rem 
+}
+.footer__main--container,.head__main--container{
+    background: var(--dirtyWhite);
+}
+.navbar__title{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.head-container__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar__sign,.content__text--ratings{
+    display: none;
+}
+
+.navbar__lists{
+    position: absolute;
+    top:4rem;
+    transform: translateX(-150%);
+    transition: all .2s;
+}
+.navbar__lists ul {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    padding: .9rem .9rem .9rem 2.3rem;
+}
+.navbar__lists ul li{
+    list-style-type:none;
+}
+
+.responsive .navbar__lists {
+    border-radius: 4px;
+    background: var(--dirtyWtr);
+    transform: translateX(-30%);
+}
+
+.head-container__content,.content__text,.footer__main--container,.foooter__nav--lists{
+    display:flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.content__text--heading{
+    font-size: 2rem;
+}
+.content__text--button{
+    display: flex;
+    flex-direction: column;
+    gap:.8rem;
+}
+.content__text--button button{
+    border: 0;
+    border-radius: 4px;
+    padding:.6rem 1.5rem;
+    color: #fff;
+    background: var(--bluePurple);
+}
+.content__text--button a{
+    align-self: center;
+    text-underline-offset: .2rem;
+}
+.content__text--dets,.infobars__,.bar__img,.content__heading--head,.main-content__heading,.content__heading--infobars,.nav__res--list,.list--body ul{
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+    
+}
+.content__text--dets span{
+    display: flex;
+    gap:.5rem;
+    font-size: .9rem;
+}
+
+
+.main__main--container{
+    display: flex;
+    flex-direction: column;
+    gap:2.5rem
+}
+.main-content__heading{
+    gap:2rem;
+}
+.content--title{
+    color: var(--bluePurple);
+}
+
+.content__heading--infobars{
+    gap:1.5rem;
+}
+
+.bar__img,.content__heading--head,.foooter__nav--lists .list--head,.intro--head,.content__img--heading{
+    font-weight: bold;
+}
+
+.content--heading,.content__img--heading{
+    font-size: 2rem;
+}
+
+
+
+
+
+.main-content__img{
+    display:flex;
+    flex-direction: column;
+    gap:1.5rem;
+    background: var(--bluePurple);
+    border-radius: 6px;
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+.content__img--head{
+    display: flex;
+    flex-direction: column;
+    gap:.9rem;
+    color: #fff;
+}
+.content__img--img{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.content__img--img img{
+    width:100%;
+    height:100%;
+    display: block;
+    object-fit:contain;
+}
+
+.content__img--button,.card--button{
+    display: flex;
+    flex-direction: column;
+}
+.content__img--button button{
+    border: none;
+    color:var(--bluePurple);
+    border-radius: 4px;
+    background: #fff;
+}
+.content__img--button button,.card--button button{
+    padding:.6rem 1.5rem;
+}
+.main-content__cards{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap:2rem;
+}
+.card{
+    border: 1px solid var(--borderColr);
+    padding: 1.5rem;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap:.8rem
+    /* justify-content: space-between; */
+}
+.card--profile{
+    display: flex;
+    gap:.5rem;
+    align-items: center;
+}
+.profile--name{
+    display: flex;
+    flex-direction: column;
+    color:var(--bluePurple);
+    font-weight: bold;
+}
+.profile--name span{
+    color:#000;
+    font-weight: normal;
+}
+.card--button button{
+    color:var(--bluePurple);
+    font-weight: bold;
+    background: transparent;
+    border:1px solid var(--borderColr) ;
+    border-radius: 3px; 
+}
+
+.foooter__nav--lists .list--body li{
+    list-style-type: none;
+    color: var(--listColr);
+}
+
+
+@media screen and (min-width:481px){
+    .head__main--container,.main__main--container,.footer__main--container{
+        padding:3rem;
+        padding-top: 2rem;
+    }
+    .head__main--container{
+        gap:2.5rem;
+    }
+    .head-container__navbar{
+        align-items: center;
+    }
+    .navbar__lists{
+        position: unset;
+        background: none;
+        transition: none;
+        transform: none;
+    }
+    .navbar__sign,.content__text--ratings{
+        display: unset;
+    }
+    .navbar__sign button:last-child {
+        background: var(--bluePurple);
+        color: #fff;
+    }
+    .navbar__burg{
+        display: none;
+    }
+    .navbar__lists ul{
+        display: flex;
+        flex-direction: row;
+        gap:1.5rem;
+        padding: 0;
+    }
+    .navbar__sign button{
+        padding:.6rem 1.5rem;
+        border:0;
+        border-radius: 3px;
+    }
+    .navbar__sign button:first-child{
+        background: transparent;
+    }
+    .head-container__content{
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .content__illus,.content__text,.content__img--img{
+        width:50%;
+        gap:1rem
+    }
+    .content__img--head{
+        width:50%;
+        gap:.5rem;
+        margin-bottom:1rem;
+    }
+    .content__text--button,.content__text--dets,.content__heading--infobars{
+        flex-direction: row;
+    }
+    .content__text--ratings span{
+        display: flex;
+        align-items: center;
+        gap:.3rem;
+    }
+    .main-content__img{
+        flex-direction: row;
+        align-items: center;
+    }
+    .content__img--button{
+        width: 50%;
+    }
+    .content__img--img{
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        align-self: flex-end;
+    }
+    .main-content__cards{
+    grid-template-columns: repeat(3,1fr);
+    gap:1rem;
+    }
+    .card--button button{
+        padding: .6rem .5rem;
+    }
+    .footer__main--container,.foooter__nav--lists{
+        flex-direction: row;
+    }
+    .foooter__intro{
+        width: 42%;
+    }
+    .foooter__nav--lists{
+        width: 58%;
+    }
+    .content__img--img img{
+        width:100%;
+        height:100%;
+    }
+    .content--heading{
+        width:60%;
+    }
+    
+}
